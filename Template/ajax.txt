@@ -1,0 +1,8 @@
+<?php
+require_once("../inc/global.inc.php");
+include "model_{table_name}.php";
+$Object = new {class}();
+$Object->set{relatedId}($_GET['{relatedId}']);
+$result= $Object->get{table_name}();
+echo json_encode($result);
+?>

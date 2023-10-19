@@ -1,0 +1,107 @@
+<?php
+include "header.php";
+include "model_{table_name}.php";
+$show = 0;
+$row = "";
+$message = "";
+$Object = new {class}();
+$submitButton = "add";
+if(isset($_GET['action'])){
+  if($_GET["action"]=="add"){
+	  $show = 1;
+  }
+  if($_GET["action"]=="edit"){
+	  $Object->setid($_GET['id']);
+	  $row=$Object->get{table_name}();
+	  if(count($row) > 0){
+		  $submitButton = "Update";
+		  $show = 1;
+	  }		
+  }
+  if($_GET["action"]=="delete"){
+	  $Object->setid($_GET['id']);
+	  if (!$Object->delete{table_name}())
+		{
+		$message = 'Error: ' . mysqli_error($con);
+		}else{
+			$message =  "1 {table_name} deleted";
+		}
+	  
+  }
+}
+if(isset($_POST['submit'])){
+  if($_POST['submit']=='add'){
+	  $Object->PostData();
+	  if (!$Object->commit()){
+			$message = 'Error: ' . mysqli_error($con);
+		}
+		else{
+			$message =  "1 {table_name} added";
+		}
+  }else{
+	  $Object->PostData();
+	  if (!$Object->commit())
+		{
+			$message = 'Error: ' . mysqli_error($con);
+		}else{
+			$message =  "1 {table_name} updated";
+		}
+  }
+}
+?>
+<div id="mainwrapper" style="width:75%; margin: 0 auto; float:none;">
+  <div id="maincontent" style="margin-left:0;>
+    <div class="homepics">
+	<h2><?php echo $message; ?></h2>
+<?php if($show == 1){
+?>
+<form id="cart" method="post" action="{table_name}.php" enctype="multipart/form-data">
+  <table width="300" style="margin-top:20px;">
+	<tbody>
+	  {form_row}
+	  <tr ><td colspan="2" align="center"><input type="submit"  name="submit" value="<?php echo $submitButton; ?>"></td></tr>
+	</tbody>
+  </table>
+</form>
+<?php }?>
+<h1><span style="float:left;">{table_name}</span><a href="{table_name}.php?action=add">Add {table_name}</a></h1>
+<?php
+$targetpage = "{table_name}.php";
+$tbl_name="`{table_name}`";
+$Object->setid('');
+if($text!=''){
+	$Object->settitle($text);
+	$sql = $Object->search{table_name}(1);
+}else{
+	$sql = $Object->get{table_name}(1);
+}
+include "pagination.php";
+$result = mysqli_query($con,$sql);
+ ${table_name}=$Object->buildarray($result);
+?>
+<table width="670">
+<thead>
+<tr>
+	{table_header}
+</tr>
+</thead>
+  <tbody>
+  <?php
+for($i=0;$i<count(${table_name});$i++){?>
+  <tr>
+  {table_row}
+  <td align="center"><a href="{table_name}.php?action=edit&id=<?php echo ${table_name}[$i]->getid();?>">Edit</a>
+	  <a href="{table_name}.php?action=delete&id=<?php echo ${table_name}[$i]->getid();?>">delete</a>
+  </td>
+  </tr>
+<?php
+}
+mysqli_close($con);
+?>
+</tbody>
+</table>
+<?php echo $pagination; ?>
+</div>
+</div>
+</div>
+<?php include "footer.php"; ?>

@@ -1,0 +1,422 @@
+﻿/* Main content */
+body{margin:10px;font:11px Verdana, Arial, Helvetica, sans-serif;color:#333;line-height:1.6;}
+td p {font:11px Verdana, Arial, Helvetica, sans-serif;color:#333;line-height:1.6;}
+ul{margin:0;padding:0;}
+
+#maincontainer{
+width: 900px;
+margin: 0 auto;
+}
+
+/* Header */
+#header {
+	padding: 6px 0;
+}
+
+#header .logo {
+	padding-top: 0px;
+	padding-bottom:5px;
+}
+#header .hdrR {
+	line-height: 16px;
+	text-align: right;
+}
+#header .hdrR p {
+	color: #60a1de;
+	font: normal 30px Arial, Helvetica, sans-serif;
+	padding: 10px 0 0 24px;
+}
+.clr {
+	clear: both;
+	line-height: 0;
+	font-size: 0;
+	height: 0;
+	border: none;
+}
+#header .logo {
+	float: left;
+}
+.l {
+	float: left;
+}
+#header .hdrR {
+	float: right;
+}
+
+/* Body content */
+#mainwrapper{
+float: left;
+width: 100%;
+}
+
+#maincontent{
+margin-left: 150px; 
+border: 1px solid #ccc;
+}
+#tbl{
+	width:100%;
+}
+#tbl td{
+	border-right:1px solid #ccc;;	
+}
+
+#tbl tr {
+	outline: 1px solid #ccc;	
+}
+
+#tooltip{
+	background: #eee;
+	border: 1px solid #444;
+	display:none;
+	width:300px;
+}
+.my-new-list{
+	padding:5px;
+}
+#tooltip li{
+	list-style:none;
+	border: 1px solid #444;
+}
+div.store{
+padding:10px;
+}
+div.pagination {
+	padding: 3px;
+	margin: 3px;
+}
+
+div.pagination a {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #ccc;
+	
+	text-decoration: none; /* no underline */
+	color: #333;
+}
+div.pagination a:hover, div.pagination a:active {
+	border: 1px solid #ccc;
+
+	color: #000;
+}
+div.pagination span.current {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+		border: 1px solid #ccc;
+		
+		font-weight: bold;
+		background-color: #333;
+		color: #FFF;
+	}
+	div.pagination span.disabled {
+		padding: 2px 5px 2px 5px;
+		margin: 2px;
+		border: 1px solid #EEE;
+	
+		color: #DDD;
+	}
+
+/* Left content */
+#lefthand{
+float: left;
+width: 140px; 
+margin-left: -900px; 
+background: #FFF;
+border: 1px solid #ccc;
+list-style:none;
+line-height:18px;
+}
+#leftside ul li{
+list-style:none;
+line-height:18px;
+padding-left:10px;
+}
+#leftside ul .selected{
+	background-color:#ccc !important;
+}
+
+/* Footer content */
+.footer1{
+clear: left;
+width: 100%;
+background: #fff;
+}
+
+#footer{
+clear: left;
+width: 100%;
+background: #fff;
+}
+
+div.bottomlinks{
+float: left;
+width: 214px;
+background: #fff;
+border-right: 1px solid #ccc;
+border-top: 1px solid #ccc;
+padding:5px;
+}
+
+
+/* Main Link Properties */
+A:link {
+	color: #333;
+	text-decoration: none;
+}
+A:visited {
+	color: #333;
+	text-decoration: none;
+}
+A:active {
+	color: #333;
+	text-decoration: none;
+}
+A:hover {
+	color: #da6805;
+	text-decoration: underline;
+}
+/* Store Generated Link Properties */
+A.ectlink:link {
+	color: #da6805;
+	text-decoration: none;
+}
+A.ectlink:visited {
+	color: #da6805;
+	text-decoration: none;
+}
+A.ectlink:active {
+	color: #da6805;
+	text-decoration: none;
+}
+A.ectlink:hover {
+	color: #333;
+	text-decoration: underline;
+}
+/* Top navbar */
+div#topnav
+{
+background-color: #333;
+border-top: solid 1px #FFFFFF;
+border-bottom: solid 1px #FFFFFF;
+}
+div#topnav ul
+{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+color: white;
+text-align: center;
+margin: 0;
+padding-bottom: 5px;
+padding-top: 5px;
+padding-left: 0px;
+line-height:1.3;
+}
+div#topnav ul li
+{
+display: inline;
+}
+div#topnav ul li a
+{
+padding: 5px 10px 5px 10px;
+color: white;
+text-decoration: none;
+border-left: 1px solid #fff;
+border-right: 1px solid #fff;
+margin-right: -1px;
+}
+div#topnav ul li a:hover
+{
+background-color: #da6805;
+color: white;
+}
+
+/* Titles */
+h1 {
+	font-size: 12px;
+	font-family : Verdana,Arial,sans-serif;
+	font-weight : bold;
+	padding-top: 5px;
+	border-bottom: 1px dotted #999;
+	color : #333;
+	margin-left: 14px;
+	margin-right: 4px;
+	text-align:right;
+}
+
+h2 {
+	font-size: 12px;
+	font-family : Verdana,Arial,sans-serif;
+	font-weight : bold;
+	padding: 5px;
+	background-color: #333;
+	color : #FFF;
+	margin-top:0px;
+
+}
+
+h3 {
+	font-size: 12px;
+	font-family : Verdana,Arial,sans-serif;
+	font-weight : bold;
+	padding: 5px;
+	background-color: #999;
+	color : #FFF;
+	margin:4px;
+	}
+
+div.homepics{
+	width:750px;
+
+}
+div.picscontent{
+	width:358px;
+	border: 1px solid #ccc;
+	padding:5px;
+	margin-top: 6px;
+	float:left;
+}
+
+div.picscontent1{
+	width:358px;
+	border: 1px solid #ccc;
+	padding:5px;
+	margin-top:6px;
+	float:right;
+}
+div.prodpic{
+	float:left;
+	
+}
+
+div.prodtext{
+	float:right;
+	width:250px;
+}
+
+/* SEARCH PROPERTIES
+-------------------------------------*/
+   
+.sub	{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #FFF;
+background: #999;
+height: 20px;
+width: 56px;
+border: 1px solid #333;
+padding-bottom:12px;
+text-align:center;
+vertical-align:bottom;
+}
+
+input.search	{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #333;
+background: #ECECEC;
+height: 16px;
+width: 240px;
+border: 1px solid #333;
+}
+
+/* Horizontal rule */
+hr {
+height: 0;
+border-width: 1px 0 0 0;
+border-style: solid;
+border-color: #e69d01;
+}
+/* Minicart */
+TD.mincart {
+font-size: 11px;
+font-family : Verdana, Arial, Helvetica, sans-serif;
+}
+
+P.mincart {
+font-size: 11px;
+font-family : Verdana, Arial, Helvetica, sans-serif;
+}
+
+table.mincart
+{
+border: 1px dotted #333;
+background-color: #FFF;
+width: 136px;
+}
+
+td.mincart
+{
+background-color: #ECECEC;
+}
+/* Table backgrounds */
+TABLE.cobtbl{
+background-color: #333;
+}
+
+TD.cobhl{
+background-color: #ECECEC;
+}
+
+TD.cobll{
+background-color: #FFF;
+color : #333;
+}
+/* PRICE NAME and DISCOUNTS DISPLAY
+-------------------------------------*/
+
+.prodprice, .detailprice, .prodname, .detailname {
+color: #60596A;
+font-size: 18px;
+font-weight : bold;
+}
+
+.discountsapply{
+color: #84210F;
+font-size: 12px;
+font-weight : bold;
+}
+.proddiscounts, .detaildiscounts, .catdiscounts{
+color: #84210F;
+font-size: 11px;
+font-weight : normal;
+}
+
+/* PRODUCT REVIEWS
+-------------------------------------*/
+.numreviews{
+color: #333;
+font-size: 13px;
+font-weight : bold;
+background-color:#ccc;
+border-bottom:1px solid #000;
+padding:4px;
+}
+
+.reviewheader{
+color: #333;
+font-size: 12px;
+font-weight : bold;
+}
+
+.reviewcomments{
+color: #333;
+font-size: 12px;
+font-weight : normal;
+line-height:1.6;
+}
+
+.reviewname{
+color: #666;
+font-size: 12px;
+font-weight : normal;
+line-height:1.6;
+}
+/* DESCRIPTION FIELDS
+-------------------------------------*/
+.detaildescription, .proddescription{
+	color: #333;
+	line-height:1.6;
+	}
+
+
+.prodcurrency{
+text-align:center;}
